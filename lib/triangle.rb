@@ -15,11 +15,11 @@ class Triangle
     else(@side1 <= 0) || (@side2 <= 0) || (@side3 <= 0)
       raise TriangleError
     end
-    elsif(equilateral?)
+    if(equilateral?)
       :equilateral
     elsif(scalene?)
       :scalene
-    elsif(isosceles?)
+    else(isosceles?)
       :isosceles
     end
   end
